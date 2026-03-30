@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="../style/register.css">
+</head>
+
+<body>
+    <div class="register">
+        <header class="header">
+            <h1>Đăng ký tài khoản</h1>
+        </header>
+        <main class="main">
+            <div class="divName">
+                <span>Họ và tên</span><br>
+                <input type="text" id="userName"><br>
+                <!-- hiển thị lỗi -->
+                <p class="div_p" id="error_name"></p>
+            </div>
+            <div class="divEmail">
+                <span>Email</span><br>
+                <input type="email" id="userEmail"><br>
+                <!-- hiển thị lỗi -->
+                <p class="div_p" id="error_email"></p>
+            </div>
+            <div class="divPassword"> 
+                <span>Mật khẩu</span><br>
+                <input type="password" id="password"><br>
+                <!-- hiển thị lỗi -->
+                <p class="div_p" id="error_password"></p>
+            </div>
+            <div class="divConfirmPassword">
+                <span>Xác nhận mật khẩu</span><br>
+                <input type="password" id="confirmPassword"><br>
+                <!-- hiển thị lỗi -->
+                <p class="div_p" id="error_confirmPassword"></p>
+            </div>
+            <button class="btnRegister" onclick="addlogin() ">Đăng ký</button>
+        </main>
+        <footer class="footer">
+            <p>Đã có tài khoản?</p>
+            <a href="http://127.0.0.1:5500/pages/login.html">Đăng nhập ngay</a>
+        </footer>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

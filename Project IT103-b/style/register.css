@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F9FAFB;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.register {
+    width: 448px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    margin-top: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* đầu */
+.header {
+    text-align: center;
+}
+/* thân */
+.main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.main span {
+    font-size: 15.6px;
+    color: #374151;
+}
+.main input {
+    width: 384px;
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid rgba(102, 99, 99, 0.585);
+}
+.main .btnRegister {
+    width: 388px;
+    height: 40px;
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    font-size: 16.1px;
+    border: none;
+    border-radius: 8px;
+}
+/* chân */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #4B5563;
+    margin: 16px 0px;
+}
+.footer a {
+    text-decoration: none;
+    color: #2563EB;
+    font-size: 17.6px;
+}
+/* hiển thị lỗi */
+.div_p {
+    color: red;
+    font-size: 12px;
+    display: block;
+}
+
