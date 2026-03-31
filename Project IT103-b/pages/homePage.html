@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
     <link rel="stylesheet" href="../style/homePage.css">
 </head>
+
 <body>
     <header>
         <div class="div_header">
             <h1>GYM MANAGEMENT</h1>
             <div class="div_a">
-                <a href="">Trang chủ</a>
-                <a href="">Lịch tập</a>
-                <a href="">Đăng nhập</a>
+                <a href="../pages/homePage.html">Trang chủ</a>
+                <a href="../pages/bookingPage.html">Lịch tập</a>
+                <a href="../pages/login.html" id="logIn" style="display: block;">Đăng nhập</a>
+                <a href="../pages/login.html" id="logOut" style="display: none;">Đăng xuất</a>
             </div>
         </div>
     </header>
 
-    <section  class="banner">
+    <section class="banner">
         <div class="image">
             <img src="../image/a816367e548d6aab61dcb73cfa8854af38fcac5b.png" alt="">
             <div class="main_in_image">
@@ -28,24 +31,81 @@
             </div>
         </div>
     </section>
-    
-    <main>
+
+    <main class="main">
         <h1>Các lớp học phổ biến</h1>
-        <!-- thẻ -->
-        <div class="card">
-            <div>
-
+        <div class="all_card">
+            <!-- thẻ -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="../image/d405a43c2e91df2b44cac686ac97525ce247c5b6.jpg" alt="">
+                </div>
+                <div class="card_main">
+                    <h3>Gym</h3>
+                    <p>Tập luyện với các thiết bị hiện đại</p>
+                    <button>Đặt lịch</button>
+                </div>
             </div>
-
-            <div>
-                
+            <div class="card">
+                <div class="card_image">
+                    <img src="../image/c76c19de1febdf97cf79d8ed83568b0a54081504.jpg" alt="">
+                </div>
+                <div class="card_main">
+                    <h3>YOGA</h3>
+                    <p>Thư giãn và cân bằng tâm trí</p>
+                    <button>Đặt lịch</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image">
+                    <img src="../image/7ef967fae24731f1d342cc2c22dbd1e6701e6e6e.png" alt="">
+                </div>
+                <div class="card_main">
+                    <h3>Zumba</h3>
+                    <p>Đốt cháy calories với những điệu <br>
+                        nhảy sôi động
+                    </p>
+                    <button>Đặt lịch</button>
+                </div>
             </div>
         </div>
-        
+
     </main>
 
     <footer>
-
+        <div class="div_footer">
+            <!--  -->
+            <div class="div_footer_one">
+                <div class="div_in">
+                    <h3>Về chúng tôi</h3>
+                    <p>Gym Management - Nơi bạn bắt đầu hành</p>
+                    <p>trình fitness của mình với các trang</p>
+                    <p>thiết bị hiện đại và đội ngũ huấn luyện</p>
+                    <p>viên chuyên nghiệp.</p>
+                    <p></p>
+                </div>
+                <div class="div_in">
+                    <h3>Liên hệ</h3>
+                    <p>Email: contact@gym.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Địa chỉ: 123 Đường ABC, Quận XYZ</p>
+                </div>
+                <div class="div_in">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="app">
+                        <p>Facebook</p>
+                        <p>Instagram</p>
+                        <p>Twitter</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="div_footer_two">
+                <p>© 2024 Gym Management. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+    <script src="../js/homePage.js"></script>
 </body>
+
 </html>

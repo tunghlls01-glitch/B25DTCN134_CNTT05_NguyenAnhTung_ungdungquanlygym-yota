@@ -1,8 +1,11 @@
-    //lấy các ô để hiển thị lỗi
+//lấy các ô để hiển thị lỗi
 let error_name = document.getElementById("error_name");
 let error_email = document.getElementById("error_email");
 let error_password = document.getElementById("error_password");
 let error_confirmPassword = document.getElementById("error_confirmPassword");
+// lấy dữ liệu localStorages
+let users = JSON.parse(localStorage.getItem("users")) || [];
+//hàm validate trống
 function empty_condition (value,errorElement, name) {
     if (value.trim() === "") {
         errorElement.innerText = name + " không được để trống"
@@ -17,6 +20,14 @@ function validateEmail(email) {
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
+//đối tượng admin
+let admin = {
+    id: Math.ceil(Math.random() * 10000000000000),
+    name: "Nguyễn Anh Tùng",
+    email: "anhtungls01@gmail.com",
+    role: "admin",
+    password: "anhtung01"
+}
 function addlogin() {
     //lấy
     let name = document.getElementById("userName").value;
@@ -28,6 +39,10 @@ function addlogin() {
         check = false;
     }
     if (!empty_condition (email,error_email, "Email")) {
+        check = false;
+    } else if(users.some(value => value.email === email)) {
+        error_email.innerText = "Tồn tại email";
+        error_email.style.display = "block"
         check = false;
     } else if(!validateEmail(email)) {
         error_email.innerText = "Email không đúng định dạng";
@@ -59,15 +74,20 @@ function addlogin() {
     }
     if (check) {
         let user = {
+            id: Math.ceil(Math.random() * 10000000000000),
             name: name,
             email: email,
+            role: "user",
             password: password
         };
-        let users = JSON.parse(localStorage.getItem("users")) || [];
         users.push(user);
         localStorage.setItem("users", JSON.stringify(users));
-        alert("Đăng ký thành công");
-        window.location.href = "homePage.html";
+        setTimeout(function(){
+            document.getElementById("status").style.display = "block";
+        }, 1);
+        setTimeout(function(){
+            window.location.href = "login.html";
+        }, 1000);   
     }
 }
 

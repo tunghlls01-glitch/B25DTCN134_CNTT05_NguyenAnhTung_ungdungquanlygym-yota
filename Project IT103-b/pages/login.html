@@ -16,18 +16,24 @@
         <main class="main">
             <div class="divEmail">
                 <span>Email</span><br>
-                <input type="email" class="loginEmail"><br>
+                <input type="email" id="loginEmail"><br>
             </div>  
             <div class="divPassword">
                 <span>Mật khẩu</span><br>
-                <input type="password" class="loginPassword"><br>
+                <input type="password" id="loginPassword"><br>
             </div>
-            <button class="buttonLogin">Đăng nhập</button><br>
+            <p class="error_login" id="error_login"></p>
+            <button class="buttonLogin" onclick="login()">Đăng nhập</button><br>
         </main>
         <footer class="footer">
             <p>Chưa có tài khoản?</p>
             <a href="http://127.0.0.1:5500/pages/register.html">Đăng ký ngay</a>
         </footer>
+        <div class="status" id="status">
+            <div class="card_success" >
+                <span>✅ đăng nhập Thành công</span>
+            </div> 
+        </div>
     </div>
 <script src="../js/login.js"></script>
 </body>

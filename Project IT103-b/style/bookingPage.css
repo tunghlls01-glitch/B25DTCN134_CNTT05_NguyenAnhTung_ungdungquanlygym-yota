@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+header {
+    width: 100%;
+    height: 52px;
+    background-color: #1F2937;
+}
+
+.div_header {
+    width: 1280px;
+    height: 52px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+header h1 {
+    font-size: 23.9px;
+}
+.div_a {
+    display: flex;
+    gap: 16px;
+}
+.div_a a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18.6px;
+}
+/* main */
+main {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+/* banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+.banner button {
+    width: 147px;
+    height: 40px;
+    background-color: #3B82F6;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 19.6px;
+}
+/* table */
+table {
+    width: 100%;
+    height: 49px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table .thead tr th {
+   text-align: left;
+   background-color: #E5E7EB;
+    
+}
+.thead tr th {
+    background-color: #e5e7eb;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #374151;
+    border-top: 1px solid #e5e7eb;
+}
+tbody button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 4px;
+}
+tbody td .btnEdit {
+    color:#3B82F6;
+}
+tbody td .btnDelete {
+    color: red;
+}
+/* form thêm */
+.formAdd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: #f9fafb;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+.formAdd h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.formAdd label {
+    font-size: 14px;
+    color: #374151;
+}
+.formAdd select {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.formAdd select:focus {
+    border-color: #3b82f6;
+}
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+.btn button {
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn button:first-child {
+    background-color: #6b7280;
+    color: #fff;
+}
+.btn button:last-child {
+    background-color: #3b82f6;
+    color: #fff;
+}
+.btn button:hover {
+    opacity: 0.9;
+}

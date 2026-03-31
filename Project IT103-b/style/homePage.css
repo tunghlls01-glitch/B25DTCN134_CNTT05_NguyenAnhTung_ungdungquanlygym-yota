@@ -41,6 +41,7 @@ header h1 {
 .image img {
     width: 100%;
     display: block;
+    filter: brightness(60%);
 }
 .main_in_image {
     position: absolute;
@@ -72,7 +73,101 @@ header h1 {
 }
 /* main */
 /* thẻ */
+.main {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+}
+.main h1 {
+    text-align: center;
+    margin: 64px 0px 48px 0px;
+}
+.all_card {
+    display: flex;
+    gap: 32px;
+    padding: 0px 16px 64px;
+}
+.main .card {
+    width: 395px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+.main .card .card_image img {
+    width: 340px;
+    margin: 0 29px;
+}
+.main .card .card_main {
+    margin: 0 29px;
+    display: flex;
+    flex-direction: column;
+}
+.main .card .card_main h3 {
+    font-size: 23.9px;
+    margin: 23.5px 0px 0px 0px;
+}
+.main .card .card_main p {
+    color: #4B5563;
+    font-size: 18.6px;
+}
+.main .card .card_main button {
+    width: 109px;
+    height: 40px;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-size: 18.6px;
+    border: none;
+    border-radius: 4px;
+}
+/* footer */
+footer {
+    width: 100%;
+    height: 330px;
+    background: #1F2937;
+}
 
+.div_footer {
+    width: 1280px;
+    height: 229px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-left: 30px;
+}
+.div_footer_one {
+    display: flex;
+    gap:32px;
+    
+}
+.div_footer_one .div_in {
+    width: 395px;
+    height: 140px;
+}
+.div_footer_one .div_in h3 {
+    color: #FFFFFF;
+    font-size: 23.9px;
+}
+.div_footer_one .div_in p {
+    color: #9CA3AF;
+    font-size: 18.6px;
+    margin: 0px 0px;
+}
+.div_footer_one .div_in .app {
+    display: flex;
+    gap: 16px;
+}
+
+.div_footer_two {
+    border-top:  1px solid #9CA3AF;
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 18.6px;
+    padding-top: 20px;
+}
 
 
 
