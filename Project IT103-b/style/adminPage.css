@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+.all {
+    display: flex;
+}
+/* thanh bên phải */
+.headerAdmin {
+    width: 250px;
+    height: 900px;
+    color: #ffffff;
+    background-color: #1F2937;
+    display: flex;
+    flex-direction: column;
+}
+.headerAdmin .main_h1 {
+   font-size: 12px;
+   padding: 0px 8px;
+}
+.headerAdmin .main_a {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 8px;
+}   
+.headerAdmin .main_a a {
+    padding: 16px 8px;
+    font-size: 19px;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+.headerAdmin .main_a a:hover{
+    background-color: rgba(221, 216, 221, 0.1);
+}
+/* thanh bên trái */
+.mainAdmin {
+    width: 1142px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 14px 24px;
+}
+.mainAdmin_one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainAdmin_one button {
+    width: 186px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 17.6px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3B82F6;
+}
+table {
+    width: 100%;
+    height: 49px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table .thead tr th {
+   text-align: left; 
+}
+.thead tr th {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #374151;
+    border-top: 1px solid #e5e7eb;
+}
+tbody button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 4px;
+}
+tbody td .btnEdit {
+    color:#3B82F6;
+}
+tbody td .btnDelete {
+    color: red;
+}
