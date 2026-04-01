@@ -55,9 +55,10 @@
             </tbody>
         </table>
     </main>
+    <!-- form đặt lịch -->
     <div class="formAdd" id="formAdd" style="display: none;">
-        <div class="">
-            <h1>Đặt lịch mới</h1>
+        <div >
+            <h1 id="formAdd_h1">Đặt lịch mới</h1>
         </div>
         <div class="classRooms">
             <label for="classRooms">Lớp học</label><br>
@@ -84,11 +85,19 @@
         </div>
         <p id="error" style="color: red; display: none;">Lỗi</p>
         <div class="btn">
-            <button onclick="closeForm()">Hủy</button>
-            <button onclick="addLists()" onclick="closeForm()">Lưu</button>
+            <button id="btn_01" onclick="closeForm()">Hủy</button>
+            <button id="btn_02" onclick="addLists()">Lưu</button>
+            <button id="btn_03" onclick="closeForm()" style="display: none; background-color: red;">Hủy</button>
+            <button id="btn_04" onclick="saveBook()" style="display: none; background-color: blue;">Sửa</button>
         </div>
     </div>
+    <!-- hiển thị xác nhận -->
+     <div class="div_check" id="div_check" style="display: none;">
+        <h1>Bạn có xác nhận muốn xóa không ?</h1>
+        <button class="btn1" onclick="offForm()">Hủy</button>
+        <button class="btn2" onclick="deleteBook(checkIndexID)">Xóa</button>
+     </div>   
     <script src="../js/bookingPage.js"></script>
-</body>
+</body>    
 
 </html>

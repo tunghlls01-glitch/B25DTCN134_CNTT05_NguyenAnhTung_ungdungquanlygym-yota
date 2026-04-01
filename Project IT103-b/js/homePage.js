@@ -11,4 +11,13 @@ document.getElementById("logIn").style.display = "none";
 //hàm xóa khi đăng xuất 
 function deletCurrentUser() {
    localStorage.removeItem("currentUser");
+   window.location.href = "login.html";
+}
+//hiển thị check
+let divCheck = document.getElementById("div_check");
+function offForm() {
+    divCheck.style.display = "none";
+}
+function renderForm() {
+    divCheck.style.display = "block";
 }

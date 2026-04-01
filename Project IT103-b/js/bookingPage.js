@@ -1,24 +1,39 @@
 //lấy dữ liệu loca
 let usersLogin = JSON.parse(localStorage.getItem("usersLogin")) || [];
-//tạo đặt lịch riêng
+//lấy lịch riêng
 let books = JSON.parse(localStorage.getItem(`books_${usersLogin.email}`)) || [];
 //hiển thị form
 function renderForm() {
-    document.getElementById("formAdd").style.display = "block"
+    document.getElementById("formAdd").style.display = "block";
 }
 let formAdd = document.getElementById("formAdd")
 //tạo nút hiện form điền
 function showForm() {
     formAdd.style.display = "block";
 }
-//tạo nút tắt form điền
+//tắt form điền
 function closeForm() {
-    formAdd.style.display = "none"
-    date.value = "";
+    formAdd.style.display = "none";
     classRoom.value = "";
     time.value = "";
+    date.value = "";
     error.innerText = "";
     error.style.display = "none";
+    document.getElementById("btn_02").style.display = "block";
+    document.getElementById("btn_03").style.display = "none";
+    document.getElementById("btn_01").style.display = "block";
+    document.getElementById("btn_04").style.display = "none";
+}
+let divCheck = document.getElementById("div_check")
+//tạo nút hiện xác nhận
+let checkIndexID;
+function showDelete(id) {
+    checkIndexID = id;
+    divCheck.style.display = "block";
+}
+//tạo nút mất xác nhận 
+function offForm() {
+    divCheck.style.display = "none";
 }
 //lấy check error
 let error = document.getElementById("error");
@@ -26,16 +41,7 @@ let error = document.getElementById("error");
 let classRoom = document.getElementById("classRooms");
 let time = document.getElementById("time");
 let date = document.getElementById("date");
-// let books = [
-//     {
-//         ...usersLogin,
-//         date: "2026-04-01",
-//         class: "Gym",
-//         time: "07:00 - 09:00"
-//     }
-// ];
-// localStorage.setItem("books", JSON.stringify(books));
-// hiển thị dữ liệu
+//hàm hiển thị
 function renderList(books) {
     let html = "";
     books.forEach(book => {
@@ -47,8 +53,8 @@ function renderList(books) {
                 <td>${book.name}</td>
                 <td>${book.email}</td>
                 <td>
-                    <button class="btnEdit">Sửa</button>
-                    <button class="btnDelete" onclick="deleteBook(${book.bookingId})">Xóa</button>
+                    <button class="btnEdit" onclick="updateBook(${book.bookingId})">Sửa</button>
+                    <button class="btnDelete" onclick="showDelete(${book.bookingId})">Xóa</button>
                 </td>
             </tr>  
         `;
@@ -72,7 +78,7 @@ function addLists() {
         return;
     } else {
         let obj = {
-            bookingId: Date.now(),   
+            bookingId: Date.now(),
             userId: usersLogin.id,
             name: usersLogin.name,
             email: usersLogin.email,
@@ -94,4 +100,51 @@ function deleteBook(id) {
     books = books.filter(value => value.bookingId !== id);
     localStorage.setItem(`books_${usersLogin.email}`, JSON.stringify(books));
     renderList(books);
+    offForm();
+}
+//hiện form sửa 
+function showFormUpdate() {
+    formAdd.style.display = "block";
+    document.getElementById("formAdd_h1").innerText = "Sửa lịch";
+    document.getElementById("btn_02").style.display = "none";
+    document.getElementById("btn_03").style.display = "block";
+    document.getElementById("btn_01").style.display = "none";
+    document.getElementById("btn_04").style.display = "block";
+    error.style.display = "none";
+}
+//lấy id sửa
+let editId;
+function updateBook(id) {
+    showFormUpdate();
+    editId = id;
+    let book = books.find(value => value.bookingId === id);
+    classRoom.value = book.class;
+    date.value = book.date;
+    time.value = book.time;
+}
+//hàm lưu
+function saveBook() {
+    //kiểm tra trùng 
+    let arrCheck = books.find((value) => {
+        return value.time === time.value && value.date === date.value;
+    });
+    if (!classRoom.value || !date.value || !time.value) {
+        error.innerText = "Nhập đầy đủ";
+        error.style.display = "block";
+        return;
+    } else if (arrCheck && arrCheck.bookingId !== editId) {
+        error.innerText = "Thời gian đó có lớp học ";
+        error.style.display = "block";
+        return;
+    } else {
+        let index = books.findIndex(value => value.bookingId === editId);
+        books[index].class = classRoom.value;
+        books[index].date = date.value;
+        books[index].time = time.value;
+        localStorage.setItem(`books_${usersLogin.email}`, JSON.stringify(books));
+        renderList(books);
+        editId = null;
+        closeForm();
+    }
+
 }
