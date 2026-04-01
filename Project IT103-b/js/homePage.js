@@ -8,3 +8,7 @@ if (currentUser.length === 0) {
 }
 document.getElementById("logOut").style.display = "block";
 document.getElementById("logIn").style.display = "none";
+//hàm xóa khi đăng xuất 
+function deletCurrentUser() {
+   localStorage.removeItem("currentUser");
+}

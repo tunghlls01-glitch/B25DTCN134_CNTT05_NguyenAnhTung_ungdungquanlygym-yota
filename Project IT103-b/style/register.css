@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #F9FAFB;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     position: relative;
 }
 .register {

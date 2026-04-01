@@ -37,7 +37,7 @@ let admins = [
         password: "nguyentung01"
     }
 ];
-//lấy đối tượng addmin
+//lưu đối tượng addmin
 localStorage.setItem("admins", JSON.stringify(admins));
 //hàm check điều kiện 
 function addlogin() {
