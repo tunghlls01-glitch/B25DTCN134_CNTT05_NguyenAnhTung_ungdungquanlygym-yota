@@ -18,8 +18,9 @@
         <div class="div_header">
             <h1>GYM MANAGEMENT</h1>
             <div class="div_a">
-                <a href="../pages/homePage.html">Trang chủ</a>
-                <a href="../pages/bookingPage.html">Lịch tập</a>
+                <a href="../pages/homePage.html" id="home" style="display: block;">Trang chủ</a>
+                <a href="../pages/bookingPage.html" id="book" style="display: block;">Lịch tập</a>
+                <a href="../pages/adminPageService.html" id="admin" style="display: block;">Quản lý admin</a>
                 <a href="../pages/login.html" id="logIn" style="display: block;">Đăng nhập</a>
                 <a href="#" id="logOut" style="display: none;" onclick="renderForm();">Đăng xuất</a>
             </div>
@@ -114,7 +115,7 @@
     <div class="div_check" id="div_check" style="display: none;">
         <h1>Bạn có xác nhận muốn đăng xuất không?</h1>
         <button class="btn1" onclick="offForm()">Hủy</button>
-        <button class="btn2" onclick="deletCurrentUser()">Đăng xuất</button>
+        <button class="btn2" onclick="deletCurrentUser(event)">Đăng xuất</button>
      </div>  
     <script src="../js/homePage.js"></script>
 </body>

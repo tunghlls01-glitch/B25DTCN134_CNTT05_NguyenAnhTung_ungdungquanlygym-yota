@@ -1,4 +1,4 @@
-//lấy dữ liệu loca
+//lấy dữ liệu loca user
 let usersLogin = JSON.parse(localStorage.getItem("usersLogin")) || [];
 //lấy lịch riêng
 let books = JSON.parse(localStorage.getItem(`books_${usersLogin.email}`)) || [];
@@ -146,5 +146,4 @@ function saveBook() {
         editId = null;
         closeForm();
     }
-
 }

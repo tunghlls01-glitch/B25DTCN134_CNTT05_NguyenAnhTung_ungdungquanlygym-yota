@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/adminPageService.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="headerAdmin">
+            <div class="main_h1">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="main_a">
+                <a href="../pages/adminPageStatistical.html" >Quản lý lịch</a>
+                <a href="../pages/adminPageService.html" style="background-color: rgba(224, 220, 224, 0.296);">Quản lý dịch vụ</a>
+                <a href="../pages/homePage.html">Trang chủ</a>
+                <a href="#" style="color: #F87171;" onclick="outLogin(event)">Đăng xuất</a>
+            </div>
+        </div>
+        <div class="mainAdmin">
+            <div class="mainAdmin_one">
+                <h1>Quản lý Dịch vụ</h1>
+                <button>Thêm dịch vụ mới</button>
+            </div>
+            <div>
+                <table>
+                    <thead class="thead">
+                        <tr>
+                            <th>Tên dịch vụ</th>
+                            <th>Mô tả</th>
+                            <th>Hình ảnh</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td>Gym</td>
+                            <td>Tập luyện với các thiết bị hiện đại</td>
+                            <td><img src="../image/d405a43c2e91df2b44cac686ac97525ce247c5b6.jpg" alt=""></td>
+                            <td>
+                                <button class="btnEdit">Sửa</button>
+                                <button class="btnDelete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yoga</td>
+                            <td>Thư giãn và can bằng tâm lý</td>
+                            <td><img src="../image/c76c19de1febdf97cf79d8ed83568b0a54081504.jpg" alt=""></td>
+                            <td>
+                                <button class="btnEdit">Sửa</button>
+                                <button class="btnDelete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zumba</td>
+                            <td>Đốt cháy calories với những điệu nhảy sôi động</td>
+                            <td><img src="../image/7ef967fae24731f1d342cc2c22dbd1e6701e6e6e.png" alt=""></td>
+                            <td>
+                                <button class="btnEdit">Sửa</button>
+                                <button class="btnDelete">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../js/adminPage.js"></script>
+</body>
+
+</html>

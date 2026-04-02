@@ -1,6 +1,13 @@
 //lấy mảng 
-let currentAdmin = JSON.parse(localStorage.getItem("adminLogin")) || [];
+let currentAdmin = JSON.parse(localStorage.getItem("adminLogin"));
 //tạo check nếu chưa đăng nhập thì không được vô
-if (currentAdmin.length === 0) {
+if (!currentAdmin) {
     window.location.href = "login.html";
+}
+
+//hàm đăng xuất 
+function outLogin(e) {
+    e.preventDefault();
+    localStorage.removeItem("adminLogin");
+    window.location.href = "login.html"
 }

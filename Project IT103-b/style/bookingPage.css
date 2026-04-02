@@ -160,11 +160,11 @@ tbody td .btnDelete {
     font-size: 14px;
     cursor: pointer;
 }
-.btn button:first-child {
+.btn .btn_01 {
     background-color: #6b7280;
     color: #fff;
 }
-.btn button:last-child {
+.btn .btn_02 {
     background-color: #3b82f6;
     color: #fff;
 }
@@ -194,4 +194,17 @@ tbody td .btnDelete {
     height: 30px;
     border-radius: 8px;
     border: none;
+}
+footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #3B82F6;
+    margin: 0 auto ;
+    text-align: center;
+    font-size: 20px;
+}
+footer p {
+    padding-top: 13px;
+    color: #FFFFFF;
 }

@@ -30,7 +30,7 @@ function login() {
             document.getElementById("status").style.display = "block";
         }, 1);
         setTimeout(function(){
-            window.location.href = "adminPage.html";
+            window.location.href = "adminPageService.html";
         }, 1000)
     } else if (findUser) {
         error_login.innerText = "";

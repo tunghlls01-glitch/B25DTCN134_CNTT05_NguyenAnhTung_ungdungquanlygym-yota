@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/adminPageStatistical.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="headerAdmin">
+            <div class="main_h1">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="main_a">
+                <a href="../pages/adminPageStatistical.html" style="background-color: rgba(224, 220, 224, 0.296);">Quản
+                    lý lịch</a>
+                <a href="../pages/adminPageService.html">Quản lý dịch vụ</a>
+                <a href="">Trang chủ</a>
+                <a href="../pages/login.html" style="color: #F87171;">Đăng xuất</a>
+            </div>
+        </div>
+        <div class="mainAdmin">
+            <h1>Thống kê lịch tập</h1>
+            <!-- div1 -->
+            <div class="total">
+                <div class="total_gym">
+                    <h2>Tổng số lịch Gym</h2>
+                    <p>0</p>
+                </div>
+                <div class="total_yoga">
+                    <h2>Tổng số lịch Yoga</h2>
+                    <p>0</p>
+                </div>
+                <div class="total_zumba">
+                    <h2>Tổng số lịch Zumba</h2>
+                    <p>0</p>
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <!-- div2 -->
+            <div>
+                <!-- bảng thống kê -->
+            </div>
+            <!-- div3 -->
+            <div>
+                <h2>Bộ lọc</h2>
+                <div>
+                    <label for="">Lớp học</label>
+                    <select name="" id="">
+                        <option value="">Tất cả</option>
+                        <option value="">Gym</option>
+                        <option value="">Yoga</option>
+                        <option value="">Zumba</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Tìm theo email">
+                </div>
+                <div>
+                    <label for="">Ngày</label>
+                    <input type="date" placeholder="Tìm theo email">
+                </div>
+            </div>
+            <!-- div4 -->
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lớp học</th>
+                            <th>Ngày tập</th>
+                            <th>Khung giờ</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="../js/adminPage.js"></script>
+</body>
+
+</html>
