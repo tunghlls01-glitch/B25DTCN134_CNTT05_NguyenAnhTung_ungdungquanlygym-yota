@@ -23,7 +23,7 @@
                 <a href="../pages/adminPageStatistical.html" >Quản lý lịch</a>
                 <a href="../pages/adminPageService.html" style="background-color: rgba(224, 220, 224, 0.296);">Quản lý dịch vụ</a>
                 <a href="../pages/homePage.html">Trang chủ</a>
-                <a href="#" style="color: #F87171;" onclick="outLogin(event)">Đăng xuất</a>
+                <a href="#" style="color: #F87171;" onclick="renderForm()">Đăng xuất</a>
             </div>
         </div>
         <div class="mainAdmin">
@@ -74,6 +74,12 @@
             </div>
         </div>
     </div>
+    <!-- hiển thị xác nhận -->
+     <div class="div_check" id="div_check" style="display: none;">
+        <h1>Bạn có muốn đăng xuất không ?</h1>
+        <button class="btn1" onclick="offForm()">Hủy</button>
+        <button class="btn2" onclick="outLogin(event)">đăng xuất</button>
+     </div> 
     <script src="../js/adminPage.js"></script>
 </body>
 
