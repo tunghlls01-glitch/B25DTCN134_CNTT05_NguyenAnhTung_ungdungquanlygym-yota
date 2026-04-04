@@ -149,3 +149,87 @@ tbody td .btnDelete {
 .btn2:hover {
     background-color: #dc2626;
 }
+/* form thêm */
+.formAdd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: #f9fafb;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.formAdd h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.formAdd label {
+    font-size: 14px;
+    color: #374151;
+}
+.formAdd select {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.formAdd input {
+    width: 94%;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.formAdd textarea {
+     width: 94%;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.formAdd select:focus {
+    border-color: #3b82f6;
+}
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+.btn button {
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn .btn_01 {
+    background-color: #6b7280;
+    color: #fff;
+}
+.btn .btn_02 {
+    background-color: #3b82f6;
+    color: #fff;
+}
+.btn button:hover {
+    opacity: 0.9;
+}

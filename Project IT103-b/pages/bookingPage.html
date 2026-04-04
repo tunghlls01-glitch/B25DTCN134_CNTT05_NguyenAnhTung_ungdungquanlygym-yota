@@ -69,10 +69,12 @@
                 <option value="zumba">Zumba</option>
             </select>
         </div>
+        <p id="error_one" style="color: red; display: block; "></p>
         <div class="date">
             <label for="date">Ngày</label><br>
             <input type="date" id="date">
         </div>
+        <p id="error_two" style="color: red; display: block; "></p>
         <div class="addTime">
             <label for="time">Khung giờ</label><br>
             <select id="time">
@@ -83,12 +85,12 @@
                 <option value="17:00 - 19:00">17:00 - 19:00</option>
             </select>
         </div>
-        <p id="error" style="color: red; display: none;">Lỗi</p>
+        <p id="error_three" style="color: red; display: block;"></p>
         <div class="btn">
             <button id="btn_01" onclick="closeForm()" style="background-color: #6b7280;">Hủy</button>
             <button id="btn_02" onclick="addLists()" style="background-color: #3b82f6;">Lưu</button>
             <button id="btn_03" onclick="closeForm()" style="display: none; background-color: red;">Hủy</button>
-            <button id="btn_04" onclick="saveBook()" style="display: none; background-color: blue;">Sửa</button>
+            <button id="btn_04" onclick="saveBook(editId)" style="display: none; background-color: blue;">Sửa</button>
         </div>
     </div>
     <!-- hiển thị xác nhận -->
@@ -98,8 +100,7 @@
         <button class="btn2" onclick="deleteBook(checkIndexID)">Xóa</button>
      </div>   
      <!-- phân trang -->
-      <footer>
-            <p>1</p>
+      <footer id="pagination">
       </footer>
     <script src="../js/bookingPage.js"></script>
 </body>    

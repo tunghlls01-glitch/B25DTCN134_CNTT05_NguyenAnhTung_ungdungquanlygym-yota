@@ -20,16 +20,13 @@ if (!currentUser && !currentAdmin) {
     document.getElementById("logIn").style.display = "none";
     document.getElementById("home").style.display = "none";
     document.getElementById("book").style.display = "none";
-
 }
-
-
 //hàm xóa khi đăng xuất user
 function deletCurrentUser(e) {
     e.preventDefault();
-   localStorage.removeItem("usersLogin");
-   localStorage.removeItem("adminLogin");
-   window.location.href = "login.html";
+    localStorage.removeItem("usersLogin");
+    localStorage.removeItem("adminLogin");
+    window.location.href = "login.html";
 }
 //hiển thị check
 let divCheck = document.getElementById("div_check");
@@ -39,4 +36,26 @@ function offForm() {
 function renderForm() {
     divCheck.style.display = "block";
 }
+
+let services = JSON.parse(localStorage.getItem("services"))
+//hàm hiển thị bên trang chủ 
+function renderHomePage(services) {
+    let html = "";
+    services.forEach((value) => {
+        return html += `
+            <div class="card">
+                <div class="card_image">
+                    <img src="${value.image}" alt="">
+                </div>
+                <div class="card_main">
+                    <h3>${value.nameServices}</h3>
+                    <p>${value.describe}</p>
+                    <button>Đặt lịch</button>
+                </div>
+            </div>
+        `
+    })
+    document.getElementById("all_card").innerHTML = html;
+}
+renderHomePage(services);
 
