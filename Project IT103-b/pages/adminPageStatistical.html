@@ -30,49 +30,52 @@
         <div class="mainAdmin">
             <h1>Thống kê lịch tập</h1>
             <!-- div1 -->
-            <div class="total">
-                <div class="total_gym">
+            <div class="total_all">
+                <div class="total">
                     <h2>Tổng số lịch Gym</h2>
-                    <p>0</p>
+                    <p style="color: #2563EB;" id="total_Gym">0</p>
                 </div>
-                <div class="total_yoga">
+                <div class="total">
                     <h2>Tổng số lịch Yoga</h2>
-                    <p>0</p>
+                    <p style="color: #059669;" id="total_Yoga">0</p>
                 </div>
-                <div class="total_zumba">
+                <div class="total">
                     <h2>Tổng số lịch Zumba</h2>
-                    <p>0</p>
-                </div>
-                <div>
-
-                </div>
-                <div>
-
+                    <p style="color: #7C3AED;;" id="total_Zumba">0</p>
                 </div>
             </div>
             <!-- div2 -->
-            <div>
+            <div class="row-justify-content-centre mt -4">
                 <!-- bảng thống kê -->
+                <div class="col-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- div3 -->
-            <div>
+            <div class="filter">
                 <h2>Bộ lọc</h2>
-                <div>
-                    <label for="">Lớp học</label>
-                    <select name="" id="">
-                        <option value="">Tất cả</option>
-                        <option value="">Gym</option>
-                        <option value="">Yoga</option>
-                        <option value="">Zumba</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="">Email</label>
-                    <input type="email" placeholder="Tìm theo email">
-                </div>
-                <div>
-                    <label for="">Ngày</label>
-                    <input type="date" placeholder="Tìm theo email">
+                <div class="roomsFilter">
+                    <div>
+                        <label for="">Lớp học</label><br>
+                        <select name="" id="">
+                            <option value="">Tất cả</option>
+                            <option value="">Gym</option>
+                            <option value="">Yoga</option>
+                            <option value="">Zumba</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Email</label><br>
+                        <input type="email" placeholder="Tìm theo email">
+                    </div>
+                    <div>
+                        <label for="">Ngày</label><br>
+                        <input type="date" placeholder="Tìm theo email">
+                    </div>
                 </div>
             </div>
             <!-- div4 -->
@@ -88,13 +91,27 @@
                             <th>Thao tác</th>
                         </tr>
                     </thead>
-                    <tbody>
-
+                    <tbody class="tbody" id="tbody">
+                        <!-- hiển thị tất cả lịch ở đây -->
+                         <!-- <tr>
+                            <td>Yoga</td>
+                            <td>2025-05-02</td>
+                            <td>14:00 - 16:00</td>
+                            <td>Nguyễn Anh Tùng</td>
+                            <td>tunghlls01@gmail.com</td>
+                            <td>
+                                <button class="btnEdit">Sửa</button>
+                                <button class="btnDelete">Xóa</button>
+                            </td>
+                         </tr> -->
                     </tbody>
                 </table>
             </div>
+            <footer id="pagination">
+            <!-- phân trang -->
+            </footer>
         </div>
-        <script src="../js/adminPage.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/adminPageStatistical.js"></script>
 </body>
-
 </html>

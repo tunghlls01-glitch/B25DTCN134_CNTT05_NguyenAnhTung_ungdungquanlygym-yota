@@ -2,6 +2,10 @@
 let usersLogin = JSON.parse(localStorage.getItem("usersLogin")) || [];
 //lấy lịch riêng
 let books = JSON.parse(localStorage.getItem(`books_${usersLogin.email}`)) || [];
+//chặn chưa đăng nhập 
+if (usersLogin.length === 0) {
+    window.location.href ="login.html";
+}
 //hiển thị form
 function renderForm() {
     document.getElementById("formAdd").style.display = "block";

@@ -21,8 +21,9 @@ body {
 }
 .headerAdmin .main_h1 {
    font-size: 12px;
-   padding: 0px 8px;
+   padding: 0px 8px;    
 }
+
 .headerAdmin .main_a {
     display: flex;
     flex-direction: column;
@@ -44,16 +45,14 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.mainAdmin .total {
+.mainAdmin h1 {
+    margin-left: 10px;
+}
+.mainAdmin .total_all {
     display: flex;
-    
-    
-    
     justify-content: space-between;
 }
-
-.mainAdmin .total .total_gym {
+.mainAdmin .total_all .total {
     margin-left: 10px;
     width: 530px;
     height: 120px;
@@ -62,19 +61,124 @@ body {
     background-color: #FFFFFF;
     font-size: 20.7px;
 }
-.mainAdmin .total .total_yoga {
-    width: 530px;
-    height: 120px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #FFFFFF;
-    font-size: 20.7px;
+.mainAdmin .total_all .total h2 {
+    margin: 30px 30px 0px 30px;
 }
-.mainAdmin .total .total_zumba {
-    width: 530px;
-    height: 120px;
+.mainAdmin .total_all .total p {
+    font-size: 25.3px;
+    font-weight: 700;
+    margin: 0px 30px 0px 30px;
+}
+
+/* tìm kiếm */
+.filter {
+    width: 1622px;
+    height: 180px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 16px;
+}
+.filter h2 {
+    margin: 32px 16px 0px 20px;
+}
+.filter .roomsFilter {
+    margin: 0 auto;
+    display: flex;
+    gap: 16px;
+}
+.filter .roomsFilter label {
+    font-size: 15.2px;
+    color: #374151;
+}
+.filter .roomsFilter div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.filter .roomsFilter input {
+    width: 514px;
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.filter .roomsFilter select {
+    width: 514px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background-color: #EFEFEF;
+}
+/* table */
+table {
+    width: 1622px;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 32px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #FFFFFF;
-    font-size: 20.7px;
+    overflow: hidden;
+}
+/* header tb */
+thead th {
+    background-color: #F3F4F6;
+    padding: 16px 12px;  
+    text-align: left;        
+    vertical-align: middle; 
+    font-size: 14px;
+    font-weight: 700;
+}
+/* body tb */
+tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #374151;
+    border-top: 1px solid #F3F4F6;
+    background-color: #ffffff;
+}
+tbody button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 4px;
+}
+tbody td .btnEdit {
+    color:#3B82F6;
+}
+tbody td .btnDelete {
+    color: red;
+}
+footer {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+footer button {
+    width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+footer button:hover {
+    background-color: #3B82F6;
+    color: #fff;
+    border-color: #3B82F6;
 }
